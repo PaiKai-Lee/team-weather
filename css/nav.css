@@ -16,12 +16,33 @@ nav .city{
     margin: 3px 0;
     cursor: pointer;
     letter-spacing: 1px;
-    transition: border-radius 0.3s;
+    transition: 0.3s;
+    position: relative;
+}
+nav .city::before{
+    content: "";
+    width: 80%;
+    height:100%;
+    border-radius: 15px 1px;
+    background-color: transparent;
+    transition:0.3s;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0,-50%);
+    z-index: -1;
 }
 nav .city:hover{
     border-radius: 1px 15px;
     letter-spacing: 5px;
+    background-color: transparent;
     font-weight: bolder;
+}
+nav .city:hover::before{
+    background-color: #18dcff;
+    border-radius: 0px 15px 1px 0px;
+    width: 20%;
 }
 nav .city:active{
     box-shadow: 0px 1px 3px;

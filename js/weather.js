@@ -77,18 +77,16 @@ function renderContent(cityName='臺北市'){
             let startIndex = null;
             if(startIndex===null){
                 startIndex = cityRecords[0].time.findIndex((time, index) => {
-                    if(time.startTime.split(" ")[1] === '06:00:00'){
-                        
-                        date.classList.add('week-tx1');
-                        let dateString = cityRecords[0].time[day*index].startTime.split(/[\-,\ ]/);
-                        date.textContent = `${dateString[1]}月${dateString[2]}號`;
-                        morningDIV.appendChild(date);
-                    }
                     return  time.startTime.split(" ")[1] === '06:00:00';           
                 })
             }
-            startIndex = startIndex + ((day-1)*2);
+            //印出日期 
+            startIndex = startIndex + ((day-1)*2); 
+            let dateString = cityRecords[0].time[startIndex].startTime.split(/[\-,\ ]/);
+            date.classList.add('week-tx1');
+            date.textContent = `${dateString[1]}月${dateString[2]}號`;
 
+            morningDIV.appendChild(date);
             morningDIV.appendChild(morningTitle);
             nightDIV.appendChild(nightTitle);
 

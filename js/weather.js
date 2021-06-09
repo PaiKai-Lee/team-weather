@@ -21,8 +21,9 @@ function getRecords(){
 
 
 function getCityRecords(cityName='臺北市'){
-    //利用every return flase就結束的特性  找出縣市資料即停止loop
     cityRecords = [];
+    
+    //利用every return flase就結束的特性  找出縣市資料即停止loop 
     records.every(city => {   
         if(city.locationName === cityName){
             city.weatherElement.forEach(item => {

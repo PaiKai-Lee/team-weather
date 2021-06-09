@@ -21,8 +21,9 @@ function getRecords(){
 
 
 function getCityRecords(cityName='臺北市'){
+
     cityRecords = [];
-    
+
     //利用every return flase就結束的特性  找出縣市資料即停止loop 
     records.every(city => {   
         if(city.locationName === cityName){
@@ -127,48 +128,16 @@ function renderContent(cityName='臺北市'){
                 
             }
             
-            
-            
-            // // 第一天取得0,1 第二天取得2,3....
-            // for(let i = day*2-2 ; i<day*2 ; i++){
-                
-            
-            //     let p = document.createElement('p');
-            //     p.classList.add('week-tx')
-            //     // 有些資料不齊全 避免error停止運作
-            //     try{
-            //         p.textContent = `${data.description} : ${data.time[i].elementValue[0].value}`
-            //         if( i%2 === 0){
-                        
-            //             morningDIV.appendChild(p);
-            //         }
-            //         else{
-            //             nightDIV.appendChild(p)
-            //         }
-            //     }
-            //     catch(e){
-            //         continue;
-            //     }
-                
-            // }
-            
-            
             card.appendChild(morningDIV);
-            
             card.appendChild(nightDIV);
-            content.appendChild(card);
-           
-  
-            
+            content.appendChild(card);       
         })
-        
     }
 }
 
 async function init(){
     await getRecords();
-    getCityRecords();
-    
+    getCityRecords();  
     renderContent('臺北市');
 }
 
@@ -180,27 +149,7 @@ function resetContent(){
     header.innerHTML ="";
 }
 
-
 init();
-
-
-
-// <div>
-//   <h4>早上</h4>
-//   <p>平均溫度 XX</p>
-//   <p>最高溫度 XX</p>
-//   <p>最低溫度 XX</p>
-//   <p>紫外獻指數 XX</p>
-//   <p>12小時降雨機率 XX%</p>
-//   <p>天氣現象 XXXXX</p>
-//   <h4>晚上</h4>
-//   <p>平均溫度 XX</p>
-//   <p>最高溫度 XX</p>
-//   <p>最低溫度 XX</p>
-//   <p>紫外獻指數 XX</p>
-//   <p>12小時降雨機率 XX%</p>
-//   <p>天氣現象 XXXXX</p>
-// </div>
 
 
 document.querySelectorAll('.city').forEach(item => {

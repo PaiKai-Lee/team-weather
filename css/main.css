@@ -13,6 +13,10 @@ main{
     margin: 10px;
     background:#FFFFFF;
 }
+main #content{
+    display: flex;
+    justify-content: center;
+}
 main .week{
     width: 18%;
     padding: 0px;

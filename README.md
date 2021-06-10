@@ -1,6 +1,6 @@
 # team-weather
 工作分配:  
- * 李百凱:nav.css comman.css-導覽列呈現效果,超連結效果  
+ * 李百凱:nav.css common.css-導覽列呈現效果,超連結效果  
  * 林威儒:weather.js-資料整理及Ajax帶入資料  
  * 曾怡萱:main.css-主要天氣內容呈現效果  
  

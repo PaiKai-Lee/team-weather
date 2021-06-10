@@ -18,6 +18,6 @@
  4. 分配方式,以python random隨機分配
  5. 各自完成內容上傳,檢查討論並對修改
 
-網頁:
-https://paikai-lee.github.io/team-weather/
+網頁:  
+https://paikai-lee.github.io/team-weather/  
 https://paikai-lee.github.io/team-weather/weather.html

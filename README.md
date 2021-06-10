@@ -16,7 +16,7 @@
     * 資料整理及Ajax帶入資料
     * 主要天氣內容呈現效果 
  4. 分配方式,以python random隨機分配
- 5. 各自完成內容上傳,檢查討論並對修改
+ 5. 各自完成內容上傳,檢查討論並對bug修改
 
 網頁:  
 https://paikai-lee.github.io/team-weather/  
